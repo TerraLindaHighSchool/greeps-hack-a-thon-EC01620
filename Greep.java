@@ -83,4 +83,42 @@ public class Greep extends Creature
             return "greep.png";
         }
     }
+    
+    public void analyzePaint()
+    {
+        boolean red = seePaint("red");
+        boolean orange = seePaint("orange");
+        boolean purple = seePaint("purple");
+        
+        int turnDirectionBinary = binaryToInt(red) + binaryToInt(orange) + binaryToInt(purple);
+        System.out.println();
+    }
+    
+    private int binaryToInt(binary b)
+    {
+        if(b) 
+        {
+            return 1;
+        } else
+        {
+            return 0;
+        }
+    }
+    
+    private int mapRotation(int r)
+    {
+        mappedRotation = r / 32;
+        return mappedRotation;
+    }
+    
+    private void turnFromWater()
+    {
+        
+    }
+    
+    public void turn(int mappedRotation)
+    {
+        
+    }
+    
 }
